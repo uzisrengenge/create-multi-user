@@ -3,7 +3,7 @@
 use Illuminate\Foundation\Application;
 use Illuminate\Foundation\Configuration\Exceptions;
 use Illuminate\Foundation\Configuration\Middleware;
-use App\Http\Middleware\SuperAdmin;
+use App\Http\Middleware\Rw;
 use App\Http\Middleware\Admin;
 use App\Http\Middleware\Normal;
 return Application::configure(basePath: dirname(__DIR__))
@@ -14,7 +14,7 @@ return Application::configure(basePath: dirname(__DIR__))
     )
     ->withMiddleware(function (Middleware $middleware) {
         $middleware->alias([
-            'superadmin'=>SuperAdmin::class,
+            'rw'=>Rw::class,
             'admin'=>Admin::class,
             'normal'=>Normal::class
         ]);

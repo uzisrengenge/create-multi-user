@@ -27,7 +27,7 @@ class Admin
         }
 
         if($userRole==1){
-            return redirect()->route('superadmin');
+            return redirect()->route('rw');
         }
 
         if($userRole==3){

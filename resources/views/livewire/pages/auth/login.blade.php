@@ -21,7 +21,7 @@ $login = function () {
 
     switch($userRole){
         case 1:
-        $this->redirectIntended(default: route('superadmin', absolute: false), navigate: true);
+        $this->redirectIntended(default: route('rw', absolute: false), navigate: true);
         break;
         case 2:
         $this->redirectIntended(default: route('admin', absolute: false), navigate: true);

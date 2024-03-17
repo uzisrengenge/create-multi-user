@@ -30,7 +30,7 @@ class Normal
         }
 
         if($userRole==1){
-            return redirect()->route('superadmin');
+            return redirect()->route('rw');
         }
     }
 }
