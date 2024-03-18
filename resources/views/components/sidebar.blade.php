@@ -1,7 +1,7 @@
 <div class="main-sidebar sidebar-style-2">
     <aside id="sidebar-wrapper">
         <div class="sidebar-brand">
-            <a href="index.html">Stisla</a>
+            <a href="index.html">RWKU</a>
         </div>
         <div class="sidebar-brand sidebar-brand-sm">
             <a href="index.html">St</a>
@@ -30,7 +30,7 @@
                 <ul class="dropdown-menu">
                     <li class="{{ Request::is('layout-default-layout') ? 'active' : '' }}">
                         <a class="nav-link"
-                            href="{{ url('layout-default-layout') }}">Data Penduduk</a>
+                            href="{{route('penduduk.index')}}">Data Penduduk</a>
                     </li>
                     <li class="{{ Request::is('transparent-sidebar') ? 'active' : '' }}">
                         <a class="nav-link"
@@ -91,6 +91,11 @@
             <li class="{{ Request::is('blank-page') ? 'active' : '' }}">
                 <a class="nav-link"
                     href="{{ url('blank-page') }}"><i class="fa fa-clipboard"></i> <span>Pengumuman</span></a>
+            </li>
+
+             <li class="{{ Request::is('blank-page') ? 'active' : '' }}">
+                <a class="nav-link"
+                    href="{{ url('blank-page') }}"><i class="fa fa-camera"></i> <span>Dokumentasi</span></a>
             </li>
 
         </ul>

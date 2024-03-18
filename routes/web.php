@@ -9,6 +9,9 @@ Route::middleware(['auth', 'verified','rw'])->group(function () {
         return view('rw.index');
     })->name('rw');
 
+    Route::resource('penduduk', \App\Http\Controllers\PendudukController::class);
+
+
 //     Route::resource('user', UserController::class);
 
 //    //categories
