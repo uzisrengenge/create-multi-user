@@ -10,9 +10,18 @@ class PendudukController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request)
     {
-        //
+        if($request->has('search')){
+            $penduduk = \App\Models\Penduduk::where('nama', 'LIKE', '%' . $request->search . '%')->paginate(8);
+          }else{
+               $penduduk = \App\Models\Penduduk::paginate(8);
+             }
+
+
+         return view('rw.data_penduduk.index', compact('penduduk'));
+
+
     }
 
     /**
